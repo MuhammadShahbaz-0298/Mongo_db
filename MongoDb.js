@@ -146,10 +146,28 @@ db.Employees.find({
   salary : {$gte : 2000}
 })
 
+db.Employees.find({
+  salary : {$lt : 2000}
+})
 
+db.Employees.find({
+  salary : {$lte : 2000}
+})
 
+db.Employees.find({
+  department : {$in : [
+    "IT",
+    "Finance"
+  ]}
+})
 
-
+db.Employees.find({
+  department : {$nin : [
+    "IT",
+    "Finance",
+    "HR"
+  ]}
+})
 
 
 
